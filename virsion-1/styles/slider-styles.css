@@ -1,0 +1,128 @@
+/* Общие стили */
+._container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: Roboto, sans-serif;
+  }
+  
+  .btn-light {
+    min-width: 170px;
+    height: auto;
+    color: #2A254B;
+    background: #F9F9F9;
+    display: inline-flex;
+  }
+  
+  /* Стили для слайдера */
+  .page-slider-popular-products {
+    margin: 0 auto;
+    overflow: hidden; /* Скрытие части слайдов, не попадающих в область просмотра */
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider-popular-products-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Навигация */
+  .slider-nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: absolute;
+    top: 50%;
+    z-index: 1; /* Помещаем навигацию поверх слайдов */
+  }
+  
+  .slider-nav a {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: #2A254B;
+    border-radius: 40%;
+  }
+  
+  /* Заголовок слайдера */
+  .slider-popular-products-header {
+    color: #2A254B;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 36px;
+  }
+  
+  /* Продукты */
+  .slider-popular-products {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  .slide-popular-product {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Иконка продукта */
+  .slide-product-icon img {
+    width: 200px;
+    max-height: 251px;
+  }
+  
+  /* Заголовок и цена продукта */
+  .slide-product-title {
+    color: #2A254B;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    padding-top: 24px;
+  }
+  
+  .slide-product-price {
+    color: #2A254B;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  
+  /* Кнопка просмотра коллекции */
+  .slide-bnt {
+    padding-top: 36px;
+  }
+  
+  .btn-view-collection {
+    display: flex;
+    width: 342px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Медиа-запрос для адаптации на экраны 740px и ниже */
+  @media screen and (max-width: 740px) {
+    .slides {
+      width: 300%; /* Увеличиваем ширину, чтобы все слайды поместились на экран */
+    }
+  
+    .slide {
+      flex: 0 0 33.33%; /* Каждый слайд занимает 33.33% ширины экрана */
+    }
+  }
+  
